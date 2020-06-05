@@ -1,0 +1,3204 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.1017.1259                               -->
+<workbook original-version='18.1' source-build='2019.3.1 (20193.19.1017.1259)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <VizInTooltipHideWorksheet />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='TAR.Owner (BUDT758_DB_0503_09)' inline='true' name='federated.1i6yu3w17p5n7f13sanku0xl5v94' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mssqllab.rhsmith.umd.edu,9758' name='sqlserver.028deit0fqfwxi11rbe2t0sjwxbh'>
+            <connection authentication='sqlserver' class='sqlserver' dbname='BUDT758_DB_0503_09' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' port='0' server='mssqllab.rhsmith.umd.edu,9758' username='BUDT758_Student_121' />
+          </named-connection>
+        </named-connections>
+        <relation join='full' type='join'>
+          <clause type='join'>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[TAR.Agent].[agtId]' />
+                <expression op='[TAR.Client].[agtId]' />
+              </expression>
+              <expression op='='>
+                <expression op='[TAR.Sign].[cltId]' />
+                <expression op='[TAR.Client].[cltId]' />
+              </expression>
+            </expression>
+          </clause>
+          <relation join='full' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[TAR.Sign].[agtId]' />
+                <expression op='[TAR.Agent].[agtId]' />
+              </expression>
+            </clause>
+            <relation join='full' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[TAR.Unit].[ownId]' />
+                  <expression op='[TAR.Owner].[ownId]' />
+                </expression>
+              </clause>
+              <relation join='full' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[TAR.Contain].[amnId]' />
+                    <expression op='[TAR.Amenity].[amnId]' />
+                  </expression>
+                </clause>
+                <relation join='full' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[TAR.Unit].[unitId]' />
+                      <expression op='[TAR.Contain].[unitId]' />
+                    </expression>
+                  </clause>
+                  <relation join='full' type='join'>
+                    <clause type='join'>
+                      <expression op='='>
+                        <expression op='[TAR.Unit].[unitId]' />
+                        <expression op='[TAR.Sign].[unitId]' />
+                      </expression>
+                    </clause>
+                    <relation connection='sqlserver.028deit0fqfwxi11rbe2t0sjwxbh' name='TAR.Unit' table='[dbo].[TAR.Unit]' type='table' />
+                    <relation connection='sqlserver.028deit0fqfwxi11rbe2t0sjwxbh' name='TAR.Sign' table='[dbo].[TAR.Sign]' type='table' />
+                  </relation>
+                  <relation connection='sqlserver.028deit0fqfwxi11rbe2t0sjwxbh' name='TAR.Contain' table='[dbo].[TAR.Contain]' type='table' />
+                </relation>
+                <relation connection='sqlserver.028deit0fqfwxi11rbe2t0sjwxbh' name='TAR.Amenity' table='[dbo].[TAR.Amenity]' type='table' />
+              </relation>
+              <relation connection='sqlserver.028deit0fqfwxi11rbe2t0sjwxbh' name='TAR.Owner' table='[dbo].[TAR.Owner]' type='table' />
+            </relation>
+            <relation connection='sqlserver.028deit0fqfwxi11rbe2t0sjwxbh' name='TAR.Agent' table='[dbo].[TAR.Agent]' type='table' />
+          </relation>
+          <relation connection='sqlserver.028deit0fqfwxi11rbe2t0sjwxbh' name='TAR.Client' table='[dbo].[TAR.Client]' type='table' />
+        </relation>
+        <cols>
+          <map key='[agtEmail]' value='[TAR.Agent].[agtEmail]' />
+          <map key='[agtFirstName]' value='[TAR.Agent].[agtFirstName]' />
+          <map key='[agtId (TAR.Agent)]' value='[TAR.Agent].[agtId]' />
+          <map key='[agtId (TAR.Client)]' value='[TAR.Client].[agtId]' />
+          <map key='[agtId]' value='[TAR.Sign].[agtId]' />
+          <map key='[agtLastName]' value='[TAR.Agent].[agtLastName]' />
+          <map key='[agtPhone]' value='[TAR.Agent].[agtPhone]' />
+          <map key='[agtTitle]' value='[TAR.Agent].[agtTitle]' />
+          <map key='[amnDescription]' value='[TAR.Amenity].[amnDescription]' />
+          <map key='[amnId (TAR.Amenity)]' value='[TAR.Amenity].[amnId]' />
+          <map key='[amnId]' value='[TAR.Contain].[amnId]' />
+          <map key='[cltEmail]' value='[TAR.Client].[cltEmail]' />
+          <map key='[cltFirstName]' value='[TAR.Client].[cltFirstName]' />
+          <map key='[cltId (TAR.Client)]' value='[TAR.Client].[cltId]' />
+          <map key='[cltId]' value='[TAR.Sign].[cltId]' />
+          <map key='[cltLastName]' value='[TAR.Client].[cltLastName]' />
+          <map key='[cltPhone]' value='[TAR.Client].[cltPhone]' />
+          <map key='[leaseEndDate]' value='[TAR.Sign].[leaseEndDate]' />
+          <map key='[leaseId]' value='[TAR.Sign].[leaseId]' />
+          <map key='[leaseStartDate]' value='[TAR.Sign].[leaseStartDate]' />
+          <map key='[ownCity]' value='[TAR.Owner].[ownCity]' />
+          <map key='[ownEmail]' value='[TAR.Owner].[ownEmail]' />
+          <map key='[ownFirstName]' value='[TAR.Owner].[ownFirstName]' />
+          <map key='[ownId (TAR.Owner)]' value='[TAR.Owner].[ownId]' />
+          <map key='[ownId]' value='[TAR.Unit].[ownId]' />
+          <map key='[ownLastName]' value='[TAR.Owner].[ownLastName]' />
+          <map key='[ownPhone]' value='[TAR.Owner].[ownPhone]' />
+          <map key='[ownState]' value='[TAR.Owner].[ownState]' />
+          <map key='[ownStreet]' value='[TAR.Owner].[ownStreet]' />
+          <map key='[ownType]' value='[TAR.Owner].[ownType]' />
+          <map key='[ownZip]' value='[TAR.Owner].[ownZip]' />
+          <map key='[unitArea]' value='[TAR.Unit].[unitArea]' />
+          <map key='[unitBath]' value='[TAR.Unit].[unitBath]' />
+          <map key='[unitBed]' value='[TAR.Unit].[unitBed]' />
+          <map key='[unitCity]' value='[TAR.Unit].[unitCity]' />
+          <map key='[unitDistFromCampus]' value='[TAR.Unit].[unitDistFromCampus]' />
+          <map key='[unitId (TAR.Contain)]' value='[TAR.Contain].[unitId]' />
+          <map key='[unitId (TAR.Sign)]' value='[TAR.Sign].[unitId]' />
+          <map key='[unitId]' value='[TAR.Unit].[unitId]' />
+          <map key='[unitNumber]' value='[TAR.Unit].[unitNumber]' />
+          <map key='[unitRent]' value='[TAR.Unit].[unitRent]' />
+          <map key='[unitState]' value='[TAR.Unit].[unitState]' />
+          <map key='[unitStreet]' value='[TAR.Unit].[unitStreet]' />
+          <map key='[unitType]' value='[TAR.Unit].[unitType]' />
+          <map key='[unitYearOfConstruction]' value='[TAR.Unit].[unitYearOfConstruction]' />
+          <map key='[unitZip]' value='[TAR.Unit].[unitZip]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>unitId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitId]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitId</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitType]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitType</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitYearOfConstruction</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[unitYearOfConstruction]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitYearOfConstruction</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitBed</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[unitBed]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitBed</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitBath</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[unitBath]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitBath</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitRent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[unitRent]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitRent</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitArea</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[unitArea]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitArea</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitNumber</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitNumber]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitNumber</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitStreet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitStreet]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitStreet</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitCity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitCity]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitCity</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitState</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitState]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitState</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitZip</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitZip]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitZip</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitDistFromCampus</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[unitDistFromCampus]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitDistFromCampus</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownId]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>ownId</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>leaseId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[leaseId]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>leaseId</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitId (TAR.Sign)]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>unitId</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtId]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>agtId</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltId]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>cltId</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>leaseStartDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[leaseStartDate]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>leaseStartDate</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>leaseEndDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[leaseEndDate]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>leaseEndDate</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitId (TAR.Contain)]</local-name>
+            <parent-name>[TAR.Contain]</parent-name>
+            <remote-alias>unitId</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amnId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amnId]</local-name>
+            <parent-name>[TAR.Contain]</parent-name>
+            <remote-alias>amnId</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amnId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amnId (TAR.Amenity)]</local-name>
+            <parent-name>[TAR.Amenity]</parent-name>
+            <remote-alias>amnId</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amnDescription</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amnDescription]</local-name>
+            <parent-name>[TAR.Amenity]</parent-name>
+            <remote-alias>amnDescription</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownId (TAR.Owner)]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownId</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownType]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownType</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownFirstName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownFirstName]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownFirstName</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownLastName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownLastName]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownLastName</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownPhone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownPhone]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownPhone</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownEmail</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownEmail]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownEmail</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownStreet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownStreet]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownStreet</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownCity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownCity]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownCity</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownState</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownState]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownState</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownZip</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownZip]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownZip</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtId (TAR.Agent)]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtId</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtTitle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtTitle]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtTitle</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtFirstName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtFirstName]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtFirstName</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtLastName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtLastName]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtLastName</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtPhone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtPhone]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtPhone</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtEmail</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtEmail]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtEmail</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltId (TAR.Client)]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltId</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltFirstName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltFirstName]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltFirstName</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltLastName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltLastName]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltLastName</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltPhone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltPhone]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltPhone</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltEmail</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltEmail]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltEmail</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtId (TAR.Client)]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>agtId</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Not Leased' datatype='integer' name='[Calculation_508906817308991489]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF((TODAY ()&gt; [leaseEndDate]) OR ([leaseId] = NULL)) THEN 1 END' />
+      </column>
+      <column caption='Unit Rent (Scaled)' datatype='real' name='[Calculation_508906817330536450]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Avg([unitRent]/100)' />
+      </column>
+      <column caption='Average (Rent)' datatype='real' name='[Calculation_508906817338916867]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Avg([unitRent])' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Agt Id' datatype='string' name='[agtId]' role='dimension' type='nominal' />
+      <column caption='Clt Id' datatype='string' name='[cltId]' role='dimension' type='nominal' />
+      <column caption='Lease End Date' datatype='date' name='[leaseEndDate]' role='dimension' type='ordinal' />
+      <column caption='Lease Id' datatype='string' name='[leaseId]' role='dimension' type='nominal' />
+      <column caption='Lease Start Date' datatype='date' name='[leaseStartDate]' role='dimension' type='ordinal' />
+      <column caption='Own Id' datatype='string' name='[ownId]' role='dimension' type='nominal' />
+      <column datatype='string' name='[ownZip]' role='dimension' type='nominal' />
+      <column caption='Unit Area' datatype='real' name='[unitArea]' role='measure' type='quantitative' />
+      <column caption='Unit Bath' datatype='integer' name='[unitBath]' role='measure' type='quantitative' />
+      <column caption='Unit Bed' datatype='integer' name='[unitBed]' role='measure' type='quantitative' />
+      <column caption='Unit City' datatype='string' name='[unitCity]' role='dimension' type='nominal' />
+      <column caption='Unit Dist From Campus' datatype='real' name='[unitDistFromCampus]' role='measure' type='quantitative' />
+      <column caption='Unit Id' datatype='string' name='[unitId]' role='dimension' type='nominal' />
+      <column caption='Unit Number' datatype='string' name='[unitNumber]' role='dimension' type='nominal' />
+      <column caption='Unit Rent' datatype='real' name='[unitRent]' role='measure' type='quantitative' />
+      <column caption='Unit State' datatype='string' name='[unitState]' role='dimension' type='nominal' />
+      <column caption='Unit Street' datatype='string' name='[unitStreet]' role='dimension' type='nominal' />
+      <column caption='Unit Type' datatype='string' name='[unitType]' role='dimension' type='nominal' />
+      <column caption='Unit Year Of Construction' datatype='date' name='[unitYearOfConstruction]' role='dimension' type='ordinal' />
+      <column caption='Unit Zip' datatype='string' name='[unitZip]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column-instance column='[unitRent]' derivation='Avg' name='[avg:unitRent:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[unitId]' derivation='Count' name='[cnt:unitId:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[unitId]' derivation='CountD' name='[ctd:unitId:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[unitId]' derivation='None' name='[none:unitId:nk]' pivot='key' type='nominal' />
+      <column-instance column='[unitType]' derivation='None' name='[none:unitType:nk]' pivot='key' type='nominal' />
+      <column-instance column='[unitRent]' derivation='Sum' name='[sum:unitRent:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_508906817330536450]' derivation='User' name='[usr:Calculation_508906817330536450:qk]' pivot='key' type='quantitative' />
+      <group caption='Tooltip (Own Zip)' hidden='true' name='[Tooltip (Own Zip)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[ownZip]' />
+        </groupfilter>
+      </group>
+      <group caption='Tooltip (Unit Zip)' hidden='true' name='[Tooltip (Unit Zip)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[unitZip]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.565527' measure-ordering='alphabetic' measure-percentage='0.434473' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[avg:unitRent:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[usr:Calculation_508906817330536450:qk]:1&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[sum:unitRent:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[usr:Calculation_508906817330536450:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[cnt:unitId:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitId:nk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:unitType:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Apartment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Townhouse&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Family Home&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='TAR.Unit (BUDT758_DB_0503_09)' inline='true' name='federated.15pz933133afb716zde4409lpu6w' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mssqllab.rhsmith.umd.edu,9758' name='sqlserver.1p67ya112ujshh130pu6b141kmi5'>
+            <connection authentication='sqlserver' class='sqlserver' dbname='BUDT758_DB_0503_09' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='mssqllab.rhsmith.umd.edu,9758' username='BUDT758_Student_121' />
+          </named-connection>
+        </named-connections>
+        <relation join='full' type='join'>
+          <clause type='join'>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[TAR.Client].[agtId]' />
+                <expression op='[TAR.Agent].[agtId]' />
+              </expression>
+              <expression op='='>
+                <expression op='[TAR.Sign].[agtId]' />
+                <expression op='[TAR.Agent].[agtId]' />
+              </expression>
+            </expression>
+          </clause>
+          <relation join='full' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[TAR.Sign].[cltId]' />
+                <expression op='[TAR.Client].[cltId]' />
+              </expression>
+            </clause>
+            <relation join='full' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[TAR.Contain].[amnId]' />
+                  <expression op='[TAR.Amenity].[amnId]' />
+                </expression>
+              </clause>
+              <relation join='full' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[TAR.Unit].[unitId]' />
+                    <expression op='[TAR.Sign].[unitId]' />
+                  </expression>
+                </clause>
+                <relation join='full' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[TAR.Unit].[unitId]' />
+                      <expression op='[TAR.Contain].[unitId]' />
+                    </expression>
+                  </clause>
+                  <relation join='full' type='join'>
+                    <clause type='join'>
+                      <expression op='='>
+                        <expression op='[TAR.Unit].[ownId]' />
+                        <expression op='[TAR.Owner].[ownId]' />
+                      </expression>
+                    </clause>
+                    <relation connection='sqlserver.1p67ya112ujshh130pu6b141kmi5' name='TAR.Unit' table='[dbo].[TAR.Unit]' type='table' />
+                    <relation connection='sqlserver.1p67ya112ujshh130pu6b141kmi5' name='TAR.Owner' table='[dbo].[TAR.Owner]' type='table' />
+                  </relation>
+                  <relation connection='sqlserver.1p67ya112ujshh130pu6b141kmi5' name='TAR.Contain' table='[dbo].[TAR.Contain]' type='table' />
+                </relation>
+                <relation connection='sqlserver.1p67ya112ujshh130pu6b141kmi5' name='TAR.Sign' table='[dbo].[TAR.Sign]' type='table' />
+              </relation>
+              <relation connection='sqlserver.1p67ya112ujshh130pu6b141kmi5' name='TAR.Amenity' table='[dbo].[TAR.Amenity]' type='table' />
+            </relation>
+            <relation connection='sqlserver.1p67ya112ujshh130pu6b141kmi5' name='TAR.Client' table='[dbo].[TAR.Client]' type='table' />
+          </relation>
+          <relation connection='sqlserver.1p67ya112ujshh130pu6b141kmi5' name='TAR.Agent' table='[dbo].[TAR.Agent]' type='table' />
+        </relation>
+        <cols>
+          <map key='[agtEmail]' value='[TAR.Agent].[agtEmail]' />
+          <map key='[agtFirstName]' value='[TAR.Agent].[agtFirstName]' />
+          <map key='[agtId (TAR.Agent)]' value='[TAR.Agent].[agtId]' />
+          <map key='[agtId (TAR.Client)]' value='[TAR.Client].[agtId]' />
+          <map key='[agtId]' value='[TAR.Sign].[agtId]' />
+          <map key='[agtLastName]' value='[TAR.Agent].[agtLastName]' />
+          <map key='[agtPhone]' value='[TAR.Agent].[agtPhone]' />
+          <map key='[agtTitle]' value='[TAR.Agent].[agtTitle]' />
+          <map key='[amnDescription]' value='[TAR.Amenity].[amnDescription]' />
+          <map key='[amnId (TAR.Amenity)]' value='[TAR.Amenity].[amnId]' />
+          <map key='[amnId]' value='[TAR.Contain].[amnId]' />
+          <map key='[cltEmail]' value='[TAR.Client].[cltEmail]' />
+          <map key='[cltFirstName]' value='[TAR.Client].[cltFirstName]' />
+          <map key='[cltId (TAR.Client)]' value='[TAR.Client].[cltId]' />
+          <map key='[cltId]' value='[TAR.Sign].[cltId]' />
+          <map key='[cltLastName]' value='[TAR.Client].[cltLastName]' />
+          <map key='[cltPhone]' value='[TAR.Client].[cltPhone]' />
+          <map key='[leaseEndDate]' value='[TAR.Sign].[leaseEndDate]' />
+          <map key='[leaseId]' value='[TAR.Sign].[leaseId]' />
+          <map key='[leaseStartDate]' value='[TAR.Sign].[leaseStartDate]' />
+          <map key='[ownCity]' value='[TAR.Owner].[ownCity]' />
+          <map key='[ownEmail]' value='[TAR.Owner].[ownEmail]' />
+          <map key='[ownFirstName]' value='[TAR.Owner].[ownFirstName]' />
+          <map key='[ownId (TAR.Owner)]' value='[TAR.Owner].[ownId]' />
+          <map key='[ownId]' value='[TAR.Unit].[ownId]' />
+          <map key='[ownLastName]' value='[TAR.Owner].[ownLastName]' />
+          <map key='[ownPhone]' value='[TAR.Owner].[ownPhone]' />
+          <map key='[ownState]' value='[TAR.Owner].[ownState]' />
+          <map key='[ownStreet]' value='[TAR.Owner].[ownStreet]' />
+          <map key='[ownType]' value='[TAR.Owner].[ownType]' />
+          <map key='[ownZip]' value='[TAR.Owner].[ownZip]' />
+          <map key='[unitArea]' value='[TAR.Unit].[unitArea]' />
+          <map key='[unitBath]' value='[TAR.Unit].[unitBath]' />
+          <map key='[unitBed]' value='[TAR.Unit].[unitBed]' />
+          <map key='[unitCity]' value='[TAR.Unit].[unitCity]' />
+          <map key='[unitDistFromCampus]' value='[TAR.Unit].[unitDistFromCampus]' />
+          <map key='[unitId (TAR.Contain)]' value='[TAR.Contain].[unitId]' />
+          <map key='[unitId (TAR.Sign)]' value='[TAR.Sign].[unitId]' />
+          <map key='[unitId]' value='[TAR.Unit].[unitId]' />
+          <map key='[unitNumber]' value='[TAR.Unit].[unitNumber]' />
+          <map key='[unitRent]' value='[TAR.Unit].[unitRent]' />
+          <map key='[unitState]' value='[TAR.Unit].[unitState]' />
+          <map key='[unitStreet]' value='[TAR.Unit].[unitStreet]' />
+          <map key='[unitType]' value='[TAR.Unit].[unitType]' />
+          <map key='[unitYearOfConstruction]' value='[TAR.Unit].[unitYearOfConstruction]' />
+          <map key='[unitZip]' value='[TAR.Unit].[unitZip]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>unitId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitId]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitId</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitType]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitType</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitYearOfConstruction</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[unitYearOfConstruction]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitYearOfConstruction</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitBed</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[unitBed]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitBed</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitBath</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[unitBath]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitBath</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitRent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[unitRent]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitRent</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitArea</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[unitArea]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitArea</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitNumber</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitNumber]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitNumber</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitStreet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitStreet]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitStreet</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitCity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitCity]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitCity</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitState</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitState]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitState</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitZip</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitZip]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitZip</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitDistFromCampus</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[unitDistFromCampus]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>unitDistFromCampus</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownId]</local-name>
+            <parent-name>[TAR.Unit]</parent-name>
+            <remote-alias>ownId</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownId (TAR.Owner)]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownId</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownType]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownType</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownFirstName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownFirstName]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownFirstName</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownLastName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownLastName]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownLastName</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownPhone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownPhone]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownPhone</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownEmail</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownEmail]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownEmail</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownStreet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownStreet]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownStreet</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownCity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownCity]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownCity</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownState</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownState]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownState</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ownZip</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ownZip]</local-name>
+            <parent-name>[TAR.Owner]</parent-name>
+            <remote-alias>ownZip</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitId (TAR.Contain)]</local-name>
+            <parent-name>[TAR.Contain]</parent-name>
+            <remote-alias>unitId</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amnId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amnId]</local-name>
+            <parent-name>[TAR.Contain]</parent-name>
+            <remote-alias>amnId</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>leaseId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[leaseId]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>leaseId</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unitId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unitId (TAR.Sign)]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>unitId</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtId]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>agtId</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltId]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>cltId</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>leaseStartDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[leaseStartDate]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>leaseStartDate</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>leaseEndDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[leaseEndDate]</local-name>
+            <parent-name>[TAR.Sign]</parent-name>
+            <remote-alias>leaseEndDate</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amnId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amnId (TAR.Amenity)]</local-name>
+            <parent-name>[TAR.Amenity]</parent-name>
+            <remote-alias>amnId</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amnDescription</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amnDescription]</local-name>
+            <parent-name>[TAR.Amenity]</parent-name>
+            <remote-alias>amnDescription</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltId (TAR.Client)]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltId</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltFirstName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltFirstName]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltFirstName</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltLastName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltLastName]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltLastName</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltPhone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltPhone]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltPhone</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cltEmail</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cltEmail]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>cltEmail</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtId (TAR.Client)]</local-name>
+            <parent-name>[TAR.Client]</parent-name>
+            <remote-alias>agtId</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtId (TAR.Agent)]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtId</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtTitle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtTitle]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtTitle</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtFirstName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtFirstName]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtFirstName</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtLastName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtLastName]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtLastName</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtPhone</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtPhone]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtPhone</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>agtEmail</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[agtEmail]</local-name>
+            <parent-name>[TAR.Agent]</parent-name>
+            <remote-alias>agtEmail</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Property Owner' datatype='string' name='[Calculation_96264504901324803]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='ownFirstName +&quot; &quot;+ownLastName' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' caption='Number of Bedrooms' datatype='integer' name='[unitBed]' role='dimension' type='ordinal' />
+      <column caption='Units' datatype='string' name='[unitId]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_96264504901324803]' derivation='None' name='[none:Calculation_96264504901324803:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.55698' measure-ordering='alphabetic' measure-percentage='0.44302' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_96264504901324803:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Maria Wilhelmus&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;MariaWilhelmus&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Allan F. Thornton&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Allan F.Thornton&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Elkins Properties, Llc&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Stacey Wiegleb&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;StaceyWiegleb&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mary Starts&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;MaryStarts&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Haichuan Yang&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;HaichuanYang&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;University Properties&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Campus Cribs, Llc&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tamara Pollack&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;TamaraPollack&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Jeannette Smedberg&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;JeannetteSmedberg&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Stadium Crossing, Llc&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Susan Wannamaker&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SusanWannamaker&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Thomas Robbin&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;ThomasRobbin&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Yaqoob Rana&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;YaqoobRana&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Phillip F. Sperry&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Phillip F.Sperry&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mandy Yates&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;MandyYates&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Capital Square, Llc&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Tahera Sammander&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;TaheraSammander&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Solomon L. Lowenstein&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Solomon L.Lowenstein&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;College Rentals Inc.&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='*Viz: Number of units of each unit type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='14'>What are the unit types and their count within each zip code?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TAR.Owner (BUDT758_DB_0503_09)' name='federated.1i6yu3w17p5n7f13sanku0xl5v94' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i6yu3w17p5n7f13sanku0xl5v94'>
+            <column-instance column='[unitId]' derivation='CountD' name='[ctd:unitId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[unitType]' derivation='None' name='[none:unitType:nk]' pivot='key' type='nominal' />
+            <column caption='Unit Id' datatype='string' name='[unitId]' role='dimension' type='nominal' />
+            <column caption='Unit Type' datatype='string' name='[unitType]' role='dimension' type='nominal' />
+            <column caption='Unit Zip' datatype='string' name='[unitZip]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[Tooltip (Unit Zip)]'>
+            <groupfilter function='level-members' level='[unitZip]' user:ui-action-filter='[Action - *Viz: Number of units of each unit type]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitType:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:unitType:nk]' />
+              <groupfilter function='member' level='[none:unitType:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitType:nk]</column>
+            <column>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[Tooltip (Unit Zip)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' scope='rows' value='Number of Units' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitType:nk]' value='59' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitType:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' palette='blue_teal_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitType:nk]' />
+              <text column='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]</rows>
+        <cols>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitType:nk]</cols>
+      </table>
+      <simple-id uuid='{E23B81A1-BE82-4549-BE31-FF864921D27B}' />
+    </worksheet>
+    <worksheet name='Number of units and their type in each zipcode'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='14'>What are the number of units of each type within each zip code?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TAR.Owner (BUDT758_DB_0503_09)' name='federated.1i6yu3w17p5n7f13sanku0xl5v94' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i6yu3w17p5n7f13sanku0xl5v94'>
+            <column-instance column='[unitId]' derivation='CountD' name='[ctd:unitId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[unitZip]' derivation='None' name='[none:unitZip:nk]' pivot='key' type='nominal' />
+            <column caption='Unit Id' datatype='string' name='[unitId]' role='dimension' type='nominal' />
+            <column caption='Unit Zip' datatype='string' name='[unitZip]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' value='Number of Units'>
+              <formatted-text>
+                <run>Number of Units</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' />
+              <color column='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' />
+              <text column='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' />
+              <text column='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitZip:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#000000' fontsize='8'>&lt;Sheet name=&quot;*Viz: Number of units of each unit type&quot; maxwidth=&quot;900&quot; maxheight=&quot;300&quot; filter=&quot;&lt;All Fields&gt;&quot;&gt;</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='8'> &lt;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitZip:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='8'># of Units: </run>
+                <run bold='true' fontsize='8'>&lt;[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]&gt;</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{87D48C84-66F9-480A-9BBD-397F2E6C1D7F}' />
+    </worksheet>
+    <worksheet name='Owner-Unit Count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='14'>Who are the five property owners with most number of units?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TAR.Unit (BUDT758_DB_0503_09)' name='federated.15pz933133afb716zde4409lpu6w' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15pz933133afb716zde4409lpu6w'>
+            <column caption='Property Owner' datatype='string' name='[Calculation_96264504901324803]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='ownFirstName +&quot; &quot;+ownLastName' />
+            </column>
+            <column-instance column='[unitId]' derivation='Count' name='[cnt:unitId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_96264504901324803]' derivation='None' name='[none:Calculation_96264504901324803:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[ownFirstName]' role='dimension' type='nominal' />
+            <column datatype='string' name='[ownLastName]' role='dimension' type='nominal' />
+            <column caption='Units' datatype='string' name='[unitId]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15pz933133afb716zde4409lpu6w].[none:Calculation_96264504901324803:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([unitId])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Calculation_96264504901324803:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.15pz933133afb716zde4409lpu6w].[none:Calculation_96264504901324803:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.15pz933133afb716zde4409lpu6w].[none:Calculation_96264504901324803:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]' scope='cols' value='Number of Units' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.15pz933133afb716zde4409lpu6w].[none:Calculation_96264504901324803:nk]' value='55' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.15pz933133afb716zde4409lpu6w].[none:Calculation_96264504901324803:nk]' value='156' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]' value='Number of Units'>
+              <formatted-text>
+                <run>Number of Units</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]' />
+              <text column='[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Property Owner: </run>
+                <run bold='true'>&lt;[federated.15pz933133afb716zde4409lpu6w].[none:Calculation_96264504901324803:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Number of Units: </run>
+                <run bold='true'>&lt;[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15pz933133afb716zde4409lpu6w].[none:Calculation_96264504901324803:nk]</rows>
+        <cols>[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]</cols>
+      </table>
+      <simple-id uuid='{AEC854C9-8599-43B4-A50D-6B19408EA6B1}' />
+    </worksheet>
+    <worksheet name='Rent Statistics'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='14'>What is the minimum, median (average), and maximum rent for the units with different number of bedrooms?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TAR.Unit (BUDT758_DB_0503_09)' name='federated.15pz933133afb716zde4409lpu6w' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15pz933133afb716zde4409lpu6w'>
+            <column-instance column='[unitRent]' derivation='Avg' name='[avg:unitRent:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[unitBed]' derivation='None' name='[none:unitBed:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[unitRent]' derivation='None' name='[none:unitRent:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[unitRent]' derivation='Sum' name='[sum:unitRent:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Number of Bedrooms' datatype='integer' name='[unitBed]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[unitRent]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.15pz933133afb716zde4409lpu6w].[none:unitRent:qk]' included-values='in-range'>
+            <min>890.0</min>
+            <max>5600.0</max>
+          </filter>
+          <slices>
+            <column>[federated.15pz933133afb716zde4409lpu6w].[none:unitRent:qk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15pz933133afb716zde4409lpu6w].[avg:unitRent:qk]' scope='rows' value='Rent' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.15pz933133afb716zde4409lpu6w].[sum:unitRent:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.15pz933133afb716zde4409lpu6w].[avg:unitRent:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='minmax' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.15pz933133afb716zde4409lpu6w].[avg:unitRent:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-color' value='#8cd17d' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15pz933133afb716zde4409lpu6w].[avg:unitRent:qk]</rows>
+        <cols>[federated.15pz933133afb716zde4409lpu6w].[none:unitBed:ok]</cols>
+      </table>
+      <simple-id uuid='{22A71120-9E1E-4E52-9EE4-AE86619CBF12}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='TAR Dashboard'>
+      <style />
+      <size maxheight='860' maxwidth='1560' minheight='860' minwidth='1560' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98140' id='31' param='horz' type='layout-flow' w='98974' x='513' y='930'>
+            <zone h='98140' id='20' param='horz' type='layout-flow' w='98974' x='513' y='930'>
+              <zone h='98140' id='15' param='horz' type='layout-flow' w='98974' x='513' y='930'>
+                <zone h='98140' id='10' param='horz' type='layout-flow' w='98974' x='513' y='930'>
+                  <zone h='98140' id='7' param='horz' type='layout-flow' w='98974' x='513' y='930'>
+                    <zone h='98140' id='5' type='layout-basic' w='98974' x='513' y='930'>
+                      <zone h='49070' id='3' name='Number of units and their type in each zipcode' w='57562' x='513' y='930'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='98140' id='12' name='Rent Statistics' w='41412' x='58075' y='930'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='49070' id='29' name='Owner-Unit Count' w='57562' x='513' y='50000'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='62' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='63' param='vert' type='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='49070' id='3' is-fixed='true' name='Number of units and their type in each zipcode' w='57562' x='513' y='930'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98140' id='12' is-fixed='true' name='Rent Statistics' w='41412' x='58075' y='930'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49070' id='29' is-fixed='true' name='Owner-Unit Count' w='57562' x='513' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A507DBFC-0960-497C-B4C8-22E30DA1BAAB}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' name='Number of units and their type in each zipcode'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[ctd:unitId:qk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:Calculation_508906817308991489:qk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:leaseId:nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:ownFirstName:nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:ownZip:nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitId (TAR.Sign):nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitId:nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitZip:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DD0A35D0-E69F-4C0B-9B9D-A8550655E1C4}' />
+    </window>
+    <window class='worksheet' name='*Viz: Number of units of each unit type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitType:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:leaseId:nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitId (TAR.Sign):nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitId:nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitType:nk]</field>
+            <field>[federated.1i6yu3w17p5n7f13sanku0xl5v94].[none:unitZip:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5B141F8E-1F28-4973-AEC0-9018A461523E}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Rent Statistics'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15pz933133afb716zde4409lpu6w].[none:unitBed:ok]</field>
+            <field>[federated.15pz933133afb716zde4409lpu6w].[none:unitRent:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9810B8A6-C81C-4D68-B9AB-5F9B1756A4E9}' />
+    </window>
+    <window class='worksheet' name='Owner-Unit Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15pz933133afb716zde4409lpu6w].[cnt:unitId:qk]</field>
+            <field>[federated.15pz933133afb716zde4409lpu6w].[none:unitId:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D7F4A328-287A-49AA-B0A3-DA4855BCC1E7}' />
+    </window>
+    <window class='dashboard' name='TAR Dashboard'>
+      <viewpoints>
+        <viewpoint name='Number of units and their type in each zipcode'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Owner-Unit Count'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Rent Statistics'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{78B6C5F8-281D-475E-861C-1E43A9EA54E3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='*Viz: Number of units of each unit type' width='192'>
+      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
+      o+3CB4HLBQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Number of units and their type in each zipcode' width='192'>
+      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
+      BQhgURMHmigAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Owner-Unit Count' width='192'>
+      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
+      y+aqxQ57AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Rent Statistics' width='192'>
+      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
+      7f8DmUiZ4nFu+OkAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='TAR Dashboard' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAfdElEQVR4nO3daXRU553n8W+p9ipVaSmV9gWEALEYRGMjAnjtdjrpbncSJ53Tmemke+b0
+      6Zkep3vOvOhXc07G53RPn07OJN3BTmJjJyF2nBAvYBwwNhgbMKtstKB9QVKpqqRSlWpR7fsz
+      LwTYMgZjGSzEfT5voG7d57n/e6t+525PXamEEAJJUqiCxS5AkhaTDICkaDIAkqLJAEiKJgMg
+      Kdq8AExMOACYdjsIRZOkYrNMB8Kca2u7ZQW0nbt5fWejPs73jX7qdrl0jD2/3o1zJnr9/hMR
+      XB7/Te/3w27m9vio8fHx+ctqO3fl/4lIEI9/dsF9X6/uhfedpa3t/LwpuXSCrs4ukpn8Avq7
+      mvrxxx9//PKLfc89S9WGrbz54i4cAQ1J13l8BdW8f+oIpRYzGlMRBbkE3d29aEwWQq4LfH/n
+      HhqbllNsLSSTjNHT3UOBoRBtPok/kmDGH8Cohd7+EcrsdgpUKkbeP8zOPW/TtHwZRw+/ib3U
+      Ql5jwqTXMNjbTYHRglGvBfK4nW7cznGM1lK80x6sVitutwuDWjA57cPlmUGTSzAViGLOBdj/
+      bg8mrZpyu410PHxluV73JNl8mlhKYDLoiEeC9A2OUma3c3zfr3Aki9jSsgaDJo97KkChHqYC
+      MWZDAWKzfkLxHGZ1ipGpMCf3Pc0FT576mmp87lEmZ8KU2UpQwbX71WkIeN1MeIKUlRYz43Ey
+      ODJBWXk5BSJLz4Vu9OYiDh048MH2MOjwuHr4t3/7OctWLiMcilBcbMU54SQRiRII+oilwWI2
+      MuUcYyaSosRaCCKL0+XBrFfhmApQqMszE07iGBtFk56+8pkdO3qYKnspibwGdTLEVDhLOhG5
+      sr5FFhPAvLoD3kn6h8ewldlRqwT9PRdAb+bI669TUVZERqXHbNSTiAS50NPHlC9IsS5/pe+g
+      b4o0c/MARIJeBi86sdvLcDuGCUQzFFsL57bj8BCnTr5P65YW+nq60ZqL6Tl/llQ6yisHT7Jt
+      S8tnDsC8PUDL+ka6egbRWJeTDjnoGZ5mw+pqvM5RvIEpnvn5i0w6J0hlM/zkyZ9e1ZnH7SCR
+      zvLkk08ScPTwg/94mkgqy66f/ZRoaJLnfvf7q9rMep24vAGefubnHHr514z6Znlm1zPM5TvN
+      zh/9iMDkRZ7dc4i9r+4D4NV9ewk4etj98hscefEZDp3r52dPPQWAy+nCceE4e99un7fcI3v3
+      8OpbJxAAIsUTP/4pkeAkT/3yd+TyeQx6A6CCdIB9B46TDjg4cLydvXt203/RxVM/+xn5eICO
+      AceV2lMzw/z45y8zOTZO6hP6Tc26ePaF/fSdPsS73ROMjY0T8Qyy+6W32P3UTnyzcWYCwXnb
+      Yz41e3/3AslEkL0H3+bI3j30TnjY9cROHCOdvPTGad5+9QWGPVFQqXnllRfpbzvOC68dpuvk
+      Gzj8aTrOd8zrMTnrZdTl5emnnyEecDPgmJ63vsBVdY+PjZEIjPPsCwd4afdTjPlm8c8EiPon
+      cXj8PLXr2Q+2T9jLvoNvz+t7wuPniZ07yQG5+Aw/fPIXREN++tqPs//tDt7Z/2vahyf40f/7
+      MclYlFQO9v92N+5AlF3PPMuWHQ8ioiHWb9r0iV/uGzEvAGtbNtF2cA/m6tXk8zliqLFqoLx+
+      Bdu33wPJBN0dbbS3dzITClNdW0tFVT3LaisB6Olqp72jHV9wbne39YE/Yn1TFcODQ/QOjFFd
+      VQ5AbW0tVfXLqa20UVRez73bt6MhydjYKCMDfRSXlHN5B1e/opntW1pIp9MgBB++a7dmwx+w
+      clk1m7bswF5aCMCK1et4cMdWfDOejyxXz1e//ihlRWbIxtAX1bHjvofIRHzU1tbSuHodRWYd
+      APNuDRqKeOiBeykp1F+ZVFtby6p1G7DXreZrD7Zw6uQ7hKLZ6/Yb8boZnXDiSxRg1aV49+3j
+      9F+cIDo7y2yigAfv20ZTQ/W87QFQWVtLZUUNjfXVfHHbWr7/gye454EvAga+cO92Gu0mBi86
+      cE44yOksqPMZQIXdrOX9ySSbqk20XQzRstIOMO8zMxSVc/+92zFqrr2+8+rW5zh57B16hseJ
+      zc7imU3w8IP30dzUQKGtmvu2b0OvzgFgLLTQ3TvCP/2vv5/X973bt2E36UgDyZCHylWb2LZj
+      O0H3GK0P/BEPbG3BOT6E2b6K1tZ7MGlgbOwiQwO9FJVVzNWksvCl7Rtu8Ct+ffMCoCtZhjYX
+      YdPGNaypK6WkdjUANdU1gIa6uiosFis6o4lVKxpBb0OfcnCirRuAIosVjd7EqqYV6MxW7CUW
+      QMdX//zL5ATo9HNfML2tnpSjk7buYWpqqgGoq6vjq19/lHw6jVqvR3OpvOqaKtAYqKuys7mp
+      hl2/fI6s2nSp/0JKK2ow6wqoq6ujQGcmPj3CMy+/w9f++MF5y62oqUGjurSi2lKa67T85Cc/
+      ZcfDf4bZWkpJoeHSRihGFR1l7+EzVNlLLq07V/qvspew+q57OLZ3NxdHx7gw5KC0shaLXn3d
+      fstWbGLbmjpUqgJ0OgNWq5kiWzm1VXa+/NAWnnjyp5zvG523PeZYMWn9vH26nXVfeBivN0jr
+      miogyQvP7oKqtTx0/4OsqDBTUFCAVqsFYFtrCxn0bF6/Asx2dCrm+v7QZ1Zd88G6Xd6eH17f
+      q+rW6rAWWbCWlFFfU8FXvvwQP3viSU6d75vXF8BI1xmmI0l+99uXKLjUN8kQz+76GVVrN2ME
+      zNVrKUs72fX0L1h3/yO89/qvOdg2xkP3PUiNJcxzv36JoooqvvboN8im0hj0c6E0GgwL/sJ/
+      lEoOhVg6jrz6AhFjA4/+8Q6e3/kTHvnHxyhe7KI+hZ0/eZJ/fOy7i13GPDIAkqLJ+wCSoskA
+      SIomAyApmuajE/7zv/8jbcOdi1GL9BFf2r6NkdnBxS7jjib3AJKiyQBIinbVIdBl6gI1O9bc
+      TV1ZNcl0Cn8kRHmxjVgygcVoZtB9kfX1q3nu2CufZ72K1VyxmuW2egCiqRiRVJRKawXaAg3B
+      eIh4JoE/5scRcC5ypUvLNfcAKsBeVEbHaC8XPQ4KVCqiiRgjnnFSmTTZXA5f+MZHRkqfTZm5
+      lPPOTmLp+NxdWbWWU6NnASgoKCCRSZLJZRe5yqXnmnsAVComfG4C0RAl5iKO9Z6l2GwlGJ3F
+      qNXjnJnEoNNTWlhMIBr6HEtWJm/Uh0lrYth7kUgqgqZAQyQZoWeqH3/MT3VRNYFYcLHLXHKu
+      uhMsrwLdPuRVoFvvmodAlcV2Kort86Z9seU+NGo1yyvqaKpadmV6mbV03uvLWpavo7q0ggfv
+      2obFWHjTilYarVrLctuyedNaajdg1pmoL6mjrqQWFXMj/UqMxdSX1M2bV6fWsbluEw2l9bQu
+      uwedRvd5lX7bu+YhUOuqTZj1Rl48dYCvbf0SyUyKBnsNx3vP0lhRj06jpXXlJqLJGNFEjDV1
+      K3HWTZLKpHEHPIx6JlhXt5Iik4VCgxlNgfrzXK87SnPFKporVjETnWFj7QaMGgOl5lKGvSM0
+      lNaRE3maK1aRzWVJZBI0li1nKtxIJpfBG/Ey5B0hT57V5SuJZxKsq1xDh6trsVfrtnDNAKQy
+      aXL5HHmRZzYeYSYcYDo0QzqTQa/VE4rO4o+ESGfSAAy4RnAHPNTaquY6VqsJREPk8jnC8QgW
+      o5lgbOE/uVMytUqNPxYgL/JEkhFSmhSeiJdYOk48k8CoMeAJT5PJZQAY848zHfFSYZkbP19s
+      LKK80E7PVB/VRVWMzowt5urcVuQ5wG1MngPcevJGmKRoMgCSoskASIomAyApmgyApGgyAJKi
+      yQBIiiYDICmaDICkaDIAkqLJAEiKJgMgKZoMgKRoMgCSoskASIomAyApmgyApGgyAJKiyQBI
+      iiYDICmaDICkaDIAkqLJAEiKJgMgKZoMgKRoMgCSoskASIomAyApmgyApGgyAJKiyQBIiiYD
+      ICmaDICkaDIAkqLJAEiKJgMgKZoMgKRoMgCSoskASIomAyApmgyApGgyAJKiyQBIiiYDICma
+      DICkaDIAkqLJAEiKJgMgKZoMgKRoMgCSoskASIqmWewCpGursNgxmuVHdCvJrXsb05gzGAzx
+      xS7jjiYPgSRFkwGQFE0eAi0Rrp5JvBf9gMBgMWCw6Am6ZwEwFRuZHJjm7q9toKjCuriFLjFy
+      D7BEhH1RGlsb0BfqEXlBLpOj+f4mzCUmUvE0VavLEXmx2GUuOXIPsEQUVVhJxdJUra7AaDWQ
+      y+Ywl5iwNZRQVG4h7ItiLDIudplLjgzAElGztvJjp9uX2QAoayj9PMu5Y8hDoCUgm8riGfYh
+      xAeHOKPvOUhGkvjG/PjG/VcOf6L+GL4x/7z2+Vye4dOjJKMpRs6MEQvJS6uXyT3AEuDqm8Ld
+      O4W1vJDxdifpRIaIL0p1cwW+MT8qtQp3rwe1tgCdUYdn2EvJUDEarZriKivVayrJJLPoTTqy
+      mRzpeAZz8WKv1e1BBmAJEDmBpcxCQYEKo9WAVq+luNKKwWJAZ9KRSaQprrai0WlAQGWTnaIq
+      K6GpMDC3B4mF4oy3O8mmsujNukVeo9uHDMASsPzu+g/+v7l+3ntNW5dds13lyvIr/7/n0Zab
+      XtedQJ4DSIomAyApmgyApGgyAJKiyQBIiiYDICmaDICkaDIAkqLJAEiKJgMgKZoMgKRoMgCS
+      oskASIomAyApmgyApGgq8eHf2UmSwsg9gKRoMgCSoskASIomAyApmgyApGgyAJKizQvAy3t+
+      S1rAm6/s5kz3OK7+Nk5fGGPnT568KQs739ZGFhg7f5SDp/quOV/MN8r3/s8/09/fz/FzXTdl
+      2TdiqOscweTntriPdf7UcaJZaDvXBsDRl3fR51l4Ub6JIUYngwtuv6DPPhfjX773Pc5dGP7E
+      WY8fPw7JIOe6huZNT0e87Hr6aZ7c9Ty5T1/BDVM//vjjj19+MdF9imTxKhwjPQRnZgk6h1i2
+      +X5Ovf4iTscYU1EN2vgkz+3Zx0W3n7vWrARg329/wZtH3qG0biXHjr7BeH87anMpL/3medq6
+      BtnYshER8/HP//cHuD2z1FdbOPzOWc6ffZemu7bw7qEXefOt4xRXNWIrMnHod79k0JuktaWZ
+      cW+M/vNnWL1uHftefBGbVcuvnt/DxckAdzU3AWme/OEPOf9+GzlTBRfbjnFhZJhcgZ5De3/L
+      iVPnqG5cw6GXdtPR2Un/RJAGm5af//J5ui9OsrbGyHOvvMGoy8WRPc/T7ZhGnZ5lMqYm6brA
+      WERHtc3CiTde5cCbb5FQmek4fYwVa1fzw+//kK3b72b//jfp6zxNZ+cFTncMsm6ZjWd//iu6
+      Bh20rKni+V+9Qu+oi4CzlzePHiOnL6a2opR9L714VT/ZSBSDVc1//Ggns2kVFlWUs52DvHvi
+      DFu+cDdqYPdTT9DR/h5nOvo5885hLDWruHj+bfa/cYRwRkfWP8qefa/jC6dof2cfh093U9+4
+      GluRmT27n6LzQg8dg06MKQ9TaSvurrdIW5fzm6d+wPvvvUf30BhvvXmI5es2c+LQywwPDhBW
+      WdHE3Dy/Zy+TgTjGxBRvnHgfXyTN8tpK+s+fYM++A7j9CeJTfbx1dpDN99xDbaWNfa/sY83a
+      Nbyybx/qhJcXDxzj2NGjrL97Kz0XOolMDrLrN7+nrLKW9uMHOHbqLEVVq3joDx/g/bcOsnbr
+      vehv0bHKvG43tWyg89xRMNSRz0YZD2ZotOkpr2/ir//2W/SefY/fHz7BY999jPzkIDNpAIHN
+      VoY6F+XYuS7co/1svO/P8Q+exuFPMjl4js5RP5pCO5tbNvFf/+7b6IF77n2YrWsqGR4b5rWD
+      76IpSPPagaMAtG5tZcfDj7CqqhD3dIBKU5qOwXEm/XEO7dtLVq3h+MFDRAHIo9IX8/f/8Bin
+      jvwe35SD6uYtFCWcGJdt4b9/+0/Zf+Bt/NEU3/6bv8U93ME7B/YRzqrpPn4QZzCGw5/m63/y
+      JVq3buSb3/k7Wrds5t0jhzh2uoPmxkogQ8egi8cee4yOk0ewG1KcOXUGrVbL6ZNnyJorcPuj
+      /Ke/+g6R6XFOHn4VfxIGzx1h1Bej3+HnW1//E/w+H5mcinJbCcDH9jPtnqSkfhWbNrbw7b94
+      BICH//ybVKqj+C/tCKLpAv7Ld75BPF7AIw9spm9kgrM9F3nsf3yXnrZ3CM74SWXS2MvL2dra
+      ysOPfJNV9XYA/NE0f/Wdv2F6fJBo0Ec4libomyKWzpPXmfnWI/eTNVawbV0VY5Mhymob+bvH
+      /oGOU0fYt3cvao2Gg4cOEgsHSOvtPLh1IwCHT3Tw3cceY3Kwg7taW2nZvIPWjasAcLsn5/6d
+      dBMN+ti4/UusrdLiDqZxT7ppbW1l49YH2b55LT7fNCqtCbu9hKGzb9B0/1ew3sLHt80LQMWq
+      jZzd+xzL12/EQIqYynDVSUKFVc9bx08yHkhQqAERm+T3J3ppbloGAjAUUVNmoaKqGru9ki8/
+      8ih1NjMAJnWGk6fOk/1wh2oTNTWVbLpnBw/f9wcfW+SW+/+QPTv/lfVfeJDa6iqqG5r4xl8+
+      iv7S+74pJ++8eQBL5QpAQ21NJcWVNQx3nuGtI8eobqgjFQ1x7sy7xLJaqmurKa9u4Kvf+EuK
+      9VBTUwOA0WTkvdMniFNIuTZKWFeKWaMCNOQSQU6fPEFOa2Fz6xZ2/+J3fOuv/4IXdv+Gra0b
+      59VbVV2DvbKWRx79BjazlpqaGlRAVV0jm9bU8vqbxwGu208mHuJ898CNf5DpGKdOv0saI+bS
+      cra13s3hg69jMhrp7niPmVD0qjZarZaezjY6e4c+psc5sz4PJ46+gc5aSXVVFQ1Na/jLR78C
+      fLDdAKz6HMdPniaQyF31uMFY2MepE8cIxrN8LJ0Rz8VeHG4vjavXU2tOc/z9QbTmMrZuWnPD
+      22BBxEcM9naLZFaI0MyUmJj0CiGEcLpcQoiMmHC4RT6XET1dnSIQjl1pMz7cL6ampoTbG7g0
+      7xzX+IjoHRgRufzc63QiKjo6ukU0HBAzoagIzUyJUDQlYrN+cb69Q0QTaSGEEKloSHgDYSEy
+      ceGcmrlUV49I5YQQ+ZwY6rsgRiemLi0lIb7/L/8quroHRC4vhNftmptPCOGbcoq+oTEhhBA7
+      //0HorOjU8SSGSFEXowO9Ymh0QmRS0WF2xsQQgiRz6ZEV0e7iKdz4sRrvxZtQ54r65KKhUV7
+      Z5dIZXJCiJzo6+sXQggxMDDwoW0kxITDMbdNRgbEwMi4yOdSwuWe246zfq9o77jch/jYfqac
+      LpERQkRDPtHdNywCXreIpnJiyjlxZb1cTpcQuZSYcE6JeDggvIGwSCcioqOjUyTSOZFKRERH
+      e7sIRRJCiLwY6OkSgXB8rq3LKYQQwuGYEPlcWlzo6hKTbqeIpnLC5XKKTDws3N7Alc/G43KI
+      zgs9IpPLi3wuK/oudIiJKZ+Ihmau9CmEELlMSnR1totwLCXEh9ZZCCH8HpcYGXcJp8slwgGv
+      CEVTYmZqbpmXt5tzbEg4p2aE1+0QXT2XP0uHiF5e6VvkDhgLlKWtrYstWzZfd662tnNs2dJ6
+      Qz1GfRMcfm+Er/3JQ6huRonSbesOCIAkLZy8DyApmgyApGgyAJKiyQBIiiYDICmaDICkaEsm
+      APl8fsFtc7mFD6dSWtvFXPZitF0yAfgstytk26Wx7MVou2T+SuSFH3+P6Gj/Ypch3WGWzB5A
+      km4FGQBJ0WQAJEWbdw4wNDzEqpXVDA+GsJjBWGwjk4hiMs+N58+nEyTyGiwmHfF4kshsgKrq
+      SnwzESYmxli9bgMlZi3JrJqxwQsUaNWYzBUYzVpM+gLC8RwlhXqmfUHq62twOiaoqa0iEIzi
+      co1TXlWPTq1CW5AnrzFDOozQWrAVFy7KxpHufNc4CU4QjBiJp6bIZXMEQyFUKhV+3xRoCynU
+      q2hcXs9oKE5R0SyxjB5bmY1U0MOIV1C7fMWlfgogESCoqcDv9WBQwVhEzbJyCydPvIelWE8m
+      ESKkLsdSaKGm0s7Q0DD+aTfawlIKtVBoU4MMgHSLzAuAWa+hr2eU6uXLSEZARZxMJotalULo
+      bJBNoTYVY9Sr0euMWExaUqkcRoOWcDhGScM6XF29rGxSYS0po7aujoTfQ8ZaSjA5w2w8h0md
+      Zdzho2llPTOhWex2C2adHVUki8vjw2g0UlJaiqm4nIJsnGRykX+lLt3RburvAaKzftIYKC0y
+      X3OeUChEcXHxp+6740f/W14GlW66m3ofoLDI9onzLOTLL0m3irwKJCnakrkTXFi7DLV6YXkV
+      QqBSLezXvUpru5jLXoy2S+Y3wblcDrVavaC22WwWjWZhWVda28Vc9mK0lYdAkqLJAEiKtmTO
+      AUITu8ilxhfUdqkdly5m2xtprzU1UlL/3xbc/+1kyQQgHR8lG+9d7DKkO4w8BJIUTQZAUrRr
+      BiAS9NHbP0A4lro0JYPL6cHpcl23w8H+HnovdBFNX/0bXv+M/4MXmTBOT/hDLz14wplPV720
+      qI4dO0ZfXx+dnZ2cPn16sctZkGueA0x5A6xb08zMlJMeRwSTxUwuIcir0hw9tB+VpZpKq4Zg
+      LItVl2Vo3M8jX/8zEokEBq0W/5STo11drF7ViD+Uo9SqY2pqipaN6zl75iRrNmwik1Hzxhvv
+      se2+HRgySZLpGU71ebHZLKQiAaqWraS8tOjz3B7SDUqn0wwODpLL5ZicnMRqtZLJZD7Tyfdi
+      uOYeoKhQT29/P+F46iPvCEpsFaxsbCAvBAKBzmjmrg3r0ABGSzE6vY58Ok3DipVU2oupaViB
+      yWTCVlyIz+ujYdUKUuE4qLRUVVjxznzwJ3xqGlZg1BagUoEKQSRy9XPtpcWn1WopKioikUhQ
+      VlZGOp3+zE+jWAyf6U7w5MQYoUSOtaubbmZNH2uq95/kVaDbhN5yF+XN3//Y95baneDPdBm0
+      un451Z+lA0laZPIqkKRoMgCSosnRoLLtbbNsORpUkj5nMgCSoi2ZwXDdYyeJJIOfPOPHyOfz
+      FBQsLOu3um19eTMN5c0L6l/67JZMAC6MncLtH17sMm66HeuRAVhE8hBIUjQZAEnRbjgAqViY
+      /oEBYqnsp15IOOBjYGCEyy1j0RihUOhj5/X750aMzhs5eoeLRCIcPXqU8fFxOjs76evrW+yS
+      FOOGzwHGnJM0NzeTivg5+OZJNm1uwROMQTpLSVkZybAPoSvEYtIBKgrSUbwJNZvWrWTS66e5
+      uRnPlItMrgBEntCMB6fBikEkyBlKaW6sA8Af8GOz2Qj4A8wGfeitZdRUlN2q9b8tWCwWNm/e
+      zJkzZ5iZmaGlpWWxS1KMG94DWAxaBvoHGHN6aFxRi3/aT9WyJiyFVgryGRKJBJl0mnBwhqFR
+      ByZrMUG/FwCtKsfAwAjxdJa62moSiQSgIpVKUVRSgm/aQzQ6N+ozNhvA4fYAkEwmWVqDaxcm
+      EAjQ3t6ORqNBq9XicDgWuyTFuGl3gj2eaSorKxbcPhgMUlJScs33nzvyr3foVaCvcO/6r141
+      Xd4J/nza3rST4M/y5Qeu++WXpFtFXgWSFE0GQFI0ORpUtr1tlr2kzwEkaSmSAZAUbckMhnu1
+      7RWmZqcW1Pbzes7md7/0Pxe0DGnxLJkAuAMuxnyji12GdIeRh0CSoskASIo2LwBjI4P0D48S
+      8vv56DO+PNMe4rEYVz/x8zLBUF83E5fG8VxTLkU0ee1ngDpdTgBczus/g/R21dXVxf79+xke
+      Hua1115jfHx8sUuSrmPeOYCKuZO+iYtDmJPLSXjG8MQKqLeb8M4msdvm/sTp6oZShoY8TCcF
+      quQspWUVrF1egjBVU19jo+v9c5gLi4jn85j1aoaHXbT+wWrOdY9zX8sy3NEcM1MhbLZCUpEg
+      CaFh6+a5EZBzA+UgEU/Qe6GD4oq6JTUatKmpCbfbzYoVK3C5XDQ0NCx2SdJ1zNsDaDQaooEA
+      xeV2hIBENo/ZoCWXzaEqmLsSYlDDwPAYAqhbvoqKijLMBi3oioj7xphweyguq8ReYgEBMPf8
+      z+nZNBXWAmaCMeCDZ4CKvAAhPnY0qEqlWnKjQffs2YPZbCYajWI0Gpfcw2KVZtHvBDtGh0ij
+      p6zEet0BcTsP/ui2vwr073/z5LzXS+2u6GIve8k9G/RmaGhctdglSAomrwJJiiYDICnaop8D
+      3Cg5GvTzabuYy5ajQSXpcyYDICnaol8FulHvDF3AH//kvxe2rqqe9dXy5pN0Y5ZQALoZmP7k
+      4RHf3HyvDIB0w+QhkKRoMgCSot20AFy8eBGAoaGha87z4eeB5jMxZkKxK88CBYjH4zelFr/f
+      z7Fjx+js7Lwp/Ul3rpt2DhD1TRIor2BsYorqijLGx12U2EoJx8IUW23MzPhRadREo3FUKkFN
+      TQ0z7g70lipyaRe+2QTRwBR1K5qJBWfQmIpIzHopr2uirNjyqWqx2Ww0NjaSzX76B/lKynLT
+      9gDFlbUMtL9PVV0VPq+XiH+C6VCOFaubCE+OU1yzDJ1aTTo5SyY3N0JSrzFTXV+Jz+vF6Zyg
+      2GansszE+ISXvBAYjSaCgcCC6hkdHaWxsfFmrZ50h7ppe4CKyipKbGVo1GoKRAatsZCikjI0
+      aGhY18KM10NVTQ3OkQEal68BoKquFi1QVV2NrboBm8XAtD9Jy4aVqI1FpCI5LLaqT12LEIKN
+      GzferFWT7mA3LQAGgwGDwXDlda256EPv6amtn7s0uXbjpg+mm0wAlNorr0yrMpg/6LSocEG1
+      qFQq+axR6Yb8fybnBpOX1ecJAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
